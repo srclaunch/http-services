@@ -1,1 +1,1 @@
-# @srclaunch/services
+# @srclaunch/http-services
