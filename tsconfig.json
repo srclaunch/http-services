@@ -1,0 +1,11 @@
+{
+  "extends": "@srclaunch/dx/tsconfig.json",
+  "compilerOptions": {
+    "declarationDir": "lib",
+    "emitDeclarationOnly": true,
+    "outDir": "lib",
+    "rootDir": "src",
+    "types": ["vite/client"]
+  },
+  "include": ["src"]
+}
