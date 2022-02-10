@@ -1,7 +1,7 @@
+import { Exception } from '@srclaunch/exceptions';
 import { HttpClient } from '@srclaunch/http-client';
 import { Environment } from '@srclaunch/types';
-import { getEnvironment } from '@srclaunch/environment';
-import { Exception } from '@srclaunch/exceptions';
+import { getEnvironment } from '@srclaunch/web-environment';
 
 import authenticationEndpoints from './authentication';
 import dataPointEndpoints from './data-points';
@@ -14,8 +14,8 @@ import userEndpoints from './users';
 const environment: Environment = getEnvironment();
 
 const hosts: {
-  [k: string]: {
-    SRCLAUNCH_API: string;
+  readonly [k: string]: {
+    readonly SRCLAUNCH_API: string;
   };
 } = {
   dev: {

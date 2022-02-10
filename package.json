@@ -26,8 +26,9 @@
   },
   "scripts": {
     "build:types": "tsc --build --force",
-    "build:vite": "vite build",
-    "build": "rm -fr ./lib && yarn build:vite yarn build:types",
+    "build:applab": "yarn applab build",
+    "build": "yarn clean && yarn build:applab && yarn build:types",
+    "clean": "rm -fr ./dist",
     "lint:eslint": "yarn eslint ./src --ext js,ts,tsx --max-warnings 0",
     "lint:stylelint": "yarn stylelint '**/*.ts[x]'",
     "lint": "yarn lint:eslint && yarn lint:stylelint",
@@ -43,6 +44,7 @@
     "yui": "yarn upgrade-interactive"
   },
   "devDependencies": {
+    "@srclaunch/cli": "^0.1.2",
     "@srclaunch/dx": "^0.1.2",
     "@srclaunch/types": "^0.1.2",
     "@types/node": "^17.0.15",
